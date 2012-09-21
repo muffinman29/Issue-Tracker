@@ -1,0 +1,5 @@
+c:\users\steven\documents\visual studio 2010\Projects\Project_Management_Tool\Project_Management_Tool\bin\Project_Management_Tool.dll
+c:\users\steven\documents\visual studio 2010\Projects\Project_Management_Tool\Project_Management_Tool\bin\Project_Management_Tool.pdb
+c:\users\steven\documents\visual studio 2010\Projects\Project_Management_Tool\Project_Management_Tool\obj\Debug\Project_Management_Tool.dll
+c:\users\steven\documents\visual studio 2010\Projects\Project_Management_Tool\Project_Management_Tool\obj\Debug\Project_Management_Tool.pdb
+C:\Users\Steven\Documents\Visual Studio 2010\Projects\Project_Management_Tool\Project_Management_Tool\obj\Debug\Project_Management_Tool.csprojResolveAssemblyReference.cache

@@ -1,0 +1,58 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Project_Management_Tool.SiteMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+    <title></title>
+    <link type="text/css" href="Styles/jquery-ui-1.8.23.custom.css" rel="Stylesheet" />
+    <script type="text/javascript" src="Scripts/jquery-1.8.0.min.js"></script>
+    <script type="text/javascript" src="Scripts/jquery-ui-1.8.23.custom.min.js"></script>
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $("ul").menu();
+            });
+
+        </script>
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form runat="server">
+    <div class="ui-widget-content">
+        <div>
+            <div class="ui-widget-header">
+                <h1>
+                    Issue Tracker
+                </h1>
+            </div>
+            <div>
+                <asp:LoginView ID="HeadLoginView" runat="server" EnableViewState="false">
+                    <AnonymousTemplate>
+                        [ <a href="~/Account/Login.aspx" id="HeadLoginStatus" runat="server">Log In</a>
+                        ]
+                    </AnonymousTemplate>
+                    <LoggedInTemplate>
+                        Welcome <span class="bold">
+                            <asp:LoginName ID="HeadLoginName" runat="server" />
+                        </span>! [
+                        <asp:LoginStatus ID="HeadLoginStatus" runat="server" LogoutAction="Redirect" LogoutText="Log Out"
+                            LogoutPageUrl="~/" />
+                        ]
+                    </LoggedInTemplate>
+                </asp:LoginView>
+            </div>
+            <div>
+                <ul class="ui-menu ui-widget ui-widget-content ui-corner-all" id="menu1">
+                    <li class="ui-menu-item"><a href="../Default.aspx">Home</a> </li>
+                    <li class="ui-menu-item"><a href="../Administration.aspx">Administration</a> </li>
+                    <li class="ui-menu-item"><a href="../About.aspx">About</a> </li>
+                </ul>               
+            </div>
+        </div>
+        <div>
+            <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+        </div>       
+    </div>   
+    </form>
+</body>
+</html>
